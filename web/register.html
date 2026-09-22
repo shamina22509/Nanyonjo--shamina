@@ -1,0 +1,68 @@
+<div id="register" class="card">
+  <h2>Customer Registration Form</h2>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <link rel="stylesheet" href="style.css" />
+  <p>
+    Register with Sham Bakery to receive weekly discount vouchers and campus
+    student special offers!
+  </p>
+
+  <div id="formWarning" class="alert-box">
+    ⚠️ Warning: Please fill out all fields before submitting your registration!
+  </div>
+  <div
+    id="successBox"
+    style="
+      display: none;
+      padding: 1rem;
+      background: #ecfdf5;
+      border: 1px solid #34d399;
+      color: #065f46;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    "
+  >
+    🎉 Success! You are now registered with Sham Bakery.
+    <br /><br />
+        <a
+          href="index.html"
+          class="btn"
+          style="background-color: var(--secondary)"
+          >Back to Main</a
+        >
+      </div>
+  </div>
+
+  <form id="registrationForm" onsubmit="handleRegistration(event)">
+    <div class="form-group">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" placeholder="" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address or Phone:</label>
+      <input type="text" id="email" placeholder="" />
+    </div>
+    <div class="form-group">
+      <label for="affiliate">Are you an IUIUKC Student/Staff?</label>
+      <input type="text" id="affiliate" placeholder="" />
+    </div>
+
+    <button type="submit" class="btn">Register Now</button>
+    <button
+      type="button"
+      class="btn btn-warning"
+      onclick="triggerClearWarning()"
+    >
+      Clear Form
+    </button>
+  </form>
+</div>
